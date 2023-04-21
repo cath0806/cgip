@@ -13,11 +13,12 @@ def reflect(x,y):
         for j in range(1):
             for k in range(3):
                 result[i][j] += a[i][k] * b[k][j]
+    result.pop(2)
     return result
 
 #getting user inputs
-x=[0,0,0,0,0,0,0,0]
-y=[0,0,0,0,0,0,0,0]
+x=[0,0,0,0,0,0,0,0,0,0]
+y=[0,0,0,0,0,0,0,0,0,0]
 num=int(input("Enter number of sides : "))
 for i in range(num):
     print("Enter co-ordinates of point ",i+1)
@@ -28,5 +29,4 @@ for i in range(num):
 print("The modified points are: ")
 for i in range(num):
     result=reflect(x[i],y[i])
-    result.pop(2)
     print("Point ",i," : ",result)
